@@ -1,0 +1,47 @@
+### 전체 일정 조회
+GET http://localhost:8080/schedules
+
+### 전체 일정 조회 (특정 작성자 필터링)
+GET http://localhost:8080/schedules?author=홍길동
+
+### 선택 일정 단건 조회 (댓글 포함)
+GET http://localhost:8080/schedules/1
+
+### 일정 생성
+POST http://localhost:8080/schedules
+Content-Type: application/json
+
+{
+  "title": "주간 스프린트 회의",
+  "content": "이번 주 개발 작업 현황 공유 및 요구사항 논의",
+  "author": "홍길동",
+  "password": "securepassword123"
+}
+
+### 일정 수정
+PATCH http://localhost:8080/schedules/1
+Content-Type: application/json
+
+{
+  "title": "수정된 주간 스프린트 회의",
+  "author": "쿠로",
+  "password": "1234"
+}
+
+### 댓글 생성
+POST http://localhost:8080/schedules/1/comments
+Content-Type: application/json
+
+{
+  "content": "이 일정에 동참하고 싶습니다. 회의실 번호를 알려주세요.",
+  "author": "임꺽정",
+  "password": "commentpassword456"
+}
+
+### 일정 삭제
+DELETE http://localhost:8080/schedules/1
+Content-Type: application/json
+
+{
+  "password": "securepassword123"
+}
