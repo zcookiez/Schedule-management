@@ -27,7 +27,7 @@ public class Comment {
     @Column(nullable = false, length = 50)
     private String author;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false)
     private String password;
 
     @CreatedDate
@@ -46,7 +46,4 @@ public class Comment {
         this.password = password;
     }
 
-    public void update(String content) {
-        this.content = content;
-    }
 }

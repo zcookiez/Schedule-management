@@ -48,7 +48,11 @@ public class Schedule {
 
     // 제목, 작성자명만 수정 가능
     public void update(String title, String author) {
-        this.title = title;
-        this.author = author;
+        if (title != null && !title.isBlank()) {
+            this.title = title;
+        }
+        if (author != null && !author.isBlank()) {
+            this.author = author;
+        }
     }
 }
