@@ -197,7 +197,7 @@ ScheduleService / CommentService: 시스템의 핵심 비즈니스 로직 구현
 ```
 
 5. 일정 삭제
-- **Method**: `DELETE`
+- **Method**: `POST`
 - **URI**: `/schedules/{id}`
 - **비고**: 비밀번호 확인 필수
 - **Request**:

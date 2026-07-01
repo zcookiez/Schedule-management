@@ -2,10 +2,10 @@
 GET http://localhost:8080/schedules
 
 ### 전체 일정 조회 (특정 작성자 필터링)
-GET http://localhost:8080/schedules?author=홍길동
+GET http://localhost:8080/schedules?author=쿠로
 
 ### 선택 일정 단건 조회 (댓글 포함)
-GET http://localhost:8080/schedules/1
+GET http://localhost:8080/schedules/2
 
 ### 일정 생성
 POST http://localhost:8080/schedules
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ### 댓글 생성
-POST http://localhost:8080/schedules/1/comments
+POST http://localhost:8080/schedules/4/comments
 Content-Type: application/json
 
 {
@@ -39,9 +39,9 @@ Content-Type: application/json
 }
 
 ### 일정 삭제
-DELETE http://localhost:8080/schedules/1
+POST http://localhost:8080/schedules/3
 Content-Type: application/json
 
 {
-  "password": "securepassword123"
+  "password": "1111"
 }
